@@ -1,8 +1,10 @@
 <div id="disqus_thread"></div>
-            <script>           
+            <script>
+              var thread = decodeURI(document.location.hash).substr(1);
+              
               var disqus_config = function () {
-              this.page.url = "https://mzanggl.github.io/disqus.html";  // Replace PAGE_URL with your page's canonical URL variable
-              this.page.identifier = "test"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+              this.page.url = "https://mzanggl.github.io/disqus.html?word="+thread;  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = thread; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
               };
 
               (function() { // DON'T EDIT BELOW THIS LINE
