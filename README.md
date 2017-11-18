@@ -1,1 +1,1 @@
-# social_jdict
+static content for dictionary app Manabi
