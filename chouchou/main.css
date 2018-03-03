@@ -55,9 +55,11 @@ header {
 	text-align: center;
 	width: 100%;
 	position: relative;
-	background: #0091EA;
-	background-repeat: no-repeat;
-	color:white;
+	color:rgb(34,34,34);
+}
+.title-wrapper {
+	height: 100vh;
+	position: relative;
 }
 header h1 {
 	font-size: 40px;
@@ -71,11 +73,11 @@ header h1 hr {
 	width: 100%;
 	z-index: 1;
 	height: 2px;
-	border-color: rgba(225, 225, 225, 0.43);
+	border-color: rgba(225, 225, 225, 0.5);
 	left: 0;
 }
 header h1 span {
-	background-color: RGB(0, 145, 234);
+	background-color: white;
 	z-index: 2;
 	display: inline-block;
 	padding: 0 10px;
@@ -92,11 +94,12 @@ header h1 img {
 	vertical-align: middle;
 	margin-right: 7px;
 }
+.get-wrapper {
+	padding: 50px 0;
+}
 .highlights-wrapper {
 	font-size: 13px;
 	color: rgb(34,34,34);
-	margin: 50px 0;
-
 }
 .highlights-wrapper ul {
 	margin-top: 50px;
@@ -128,8 +131,12 @@ header h1 img {
 }
 
 #device-art {
-	position: relative;
-	height: 400px;
+	background: RGB(0, 145, 234);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100vh - 220px);
 }
 #device-art img {
 	position: absolute;
@@ -139,6 +146,7 @@ header h1 img {
 	margin-right: auto;
 	left: 0;
 	right: 0;
+	max-height: 100%;
 }
 .appstore-ref {
 	margin: 0 auto;
@@ -151,8 +159,6 @@ footer {
 	font-size: 12px;
 	padding: 30px;
 }
-
-
 
 @media (min-width:992px){
 	.highlights-wrapper {
