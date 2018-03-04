@@ -117,7 +117,13 @@ header h1 img {
 	background-color: #0091EA;
 }
 .highlights-wrapper ul li:nth-of-type(4) i {
-	background-color: #DB0A5B;
+    background-color: #DB0A5B;
+}
+.highlights-wrapper ul li:nth-of-type(5) i {
+    background-color: #F62459;
+}
+.highlights-wrapper ul li:nth-of-type(6) i {
+    background-color: #9C27B0;
 }
 .highlights-wrapper ul li i {
 	font-size: 50px;
@@ -128,6 +134,7 @@ header h1 img {
 	border-radius: 3px;
 	display: inline-block;
 	float: left;
+	width: 110px;
 }
 
 #device-art {
