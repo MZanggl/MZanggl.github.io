@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Michael Zanggl</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/jpeg" href="_assets/images/logo.jpg">
+    <style>
+        [v-cloak] {display: none}
+    </style>
+</head>
+<body class="font-sans">
+    <header class="p-3 text-center bg-white border-b z-20 relative">
+        <img src="_assets/images/logo.jpg" class="rounded-full border-indigo-dark shadow h-12">
+        <div class="text-sm mt-2">Michael Zanggl</div>
+        <div class="pt-5 pb-4 text-xl">
+            <a class="text-grey-darkest" href="https://github.com/MZanggl"><i class="fab fa-github px-2"></i></a>
+            <a class="text-grey-darkest" href="https://dev.to/mzanggl"><i class="fab fa-dev px-2"></i></a>
+            <a class="text-grey-darkest" href="mailto:michaelzanggl@gmail.com"><i class="fa fa-envelope px-2"></i></a>
+        </div>
+    </header>
+    <div class="p-3 text-center bg-white border-b z-10 fixed pin-t pin-l w-full">
+        <img src="_assets/images/logo.jpg" class="align-middle rounded-full border-indigo-dark shadow h-12">
+        <span class="ml-1 align-middle text-sm">Michael Zanggl</span>
+    </div>
+    <main id="app">
+    
+        <noscript>This app requires a Javascript enabled browser.</noscript>
+        <div class="py-16 px-3 bg-grey-lighter">
+            <h3 class="text-center text-grey-darkest text-xl">Recent projects</h3>
+            <div class="my-5 px-6 py-4">
+
+                <div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
+                    <div class="sm:flex sm:items-center px-6 py-4">
+                        <img class="block w-16 mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0" src="https://ipluseins.com/images/logo.png" alt="">
+                        <div class="text-center  sm:text-left sm:flex-grow">
+                            <div class="mb-4">
+                                <p class="text-xl leading-tight">ipluseins</p>
+                                <p class="text-sm leading-tight text-grey-dark">Free language learning service</p>
+                            </div>
+                            <div>
+                                <a href="https://ipluseins.com">
+                                    <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white">Visit</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
+                    <div class="sm:flex sm:items-center px-6 py-4">
+                        <img class="block w-16 mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0" src="https://github.com/MZanggl/oresm/blob/master/logo.png?raw=true" alt="">
+                        <div class="text-center sm:text-left sm:flex-grow">
+                            <div class="mb-4">
+                                <p class="text-xl leading-tight">oresm</p>
+                                <p class="text-sm leading-tight text-grey-dark">Client ORM for REST APIs</p>
+                            </div>
+                            <div>
+                                <a href="https://github.com/MZanggl/oresm">
+                                    <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white">Visit</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
+                    <div class="sm:flex sm:items-center px-6 py-4">
+                        <img class="block w-16 mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0" src="_assets/images/adonis-vue-logo.png" alt="">
+                        <div class="text-center sm:text-left sm:flex-grow">
+                            <div class="mb-4">
+                                <p class="text-xl leading-tight">Adonis / Vue blueprint</p>
+                                <p class="text-sm leading-tight text-grey-dark">Fullstack boilerplate for AdonisJs and VueJs</p>
+                            </div>
+                            <div>
+                                <a href="https://github.com/MZanggl/adonis-vue-demo">
+                                    <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white">Visit</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="py-10 px-3 bg-indigo-darkest text-left text-white" v-cloak>
+            <div class="mx-auto max-w-sm font-mono">
+                {
+                <div v-for="(value, key, index) in description" class="ml-5">
+                    <span class="text-blue-light">"{{ key }}"</span>:
+                    <span class="text-yellow-light">"{{ value }}"</span><span v-if="index + 1 < descriptionLength">,</span>
+                </div>
+                }
+            </div>
+        </div>
+
+        <div class="my-16 px-4 container mx-auto" v-cloak>
+            <h3 class="text-center text-grey-darkest text-xl">Articles</h3>
+            <div v-for="article in articles" :key="article.url" class="bg-white mx-auto max-w-sm my-5 px-6 py-4">
+                <a :href="article.url" class="no-underline text-grey-darkest">
+                    <p class="text-xl leading-tight font-bold" v-text="article.title"></p>
+                </a>
+                <p class="text-sm leading-tight text-grey-dark" v-text="article.teaser"></p>
+                <a :href="article.url" class="block mt-4">
+                    <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white">Read</button>
+                </a>
+            </div>
+        </div>
+
+    </main>
+    <footer class="text-center bg-indigo-lightest py-5 relative">
+        <div class="text-xl">
+            <a class="text-indigo-darkest" href="https://github.com/MZanggl"><i class="fab fa-github px-2"></i></a>
+            <a class="text-indigo-darkest" href="https://dev.to/mzanggl"><i class="fab fa-dev px-2"></i></a>
+            <a class="text-indigo-darkest" href="mailto:michaelzanggl@gmail.com"><i class="fa fa-envelope px-2"></i></a>
+        </div>
+        <div class="text-sm pt-3">
+            Michael Zanggl
+        </div>
+    </footer>
+
+    <script src="_assets/scripts/vue.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script src="_assets/scripts/main.js"></script>
+</body>
+</html>
