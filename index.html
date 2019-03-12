@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Portfolio of Michael Zanggl">
     <title>Michael Zanggl</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -14,16 +15,16 @@
 </head>
 <body class="font-sans">
     <header class="p-3 text-center bg-white border-b z-20 relative">
-        <img src="_assets/images/logo.jpg" class="rounded-full border-indigo-dark shadow h-12">
+        <img src="_assets/images/logo.jpg" alt="" class="rounded-full border-indigo-dark shadow h-12">
         <div class="text-sm mt-2">Michael Zanggl</div>
         <div class="pt-5 pb-4 text-xl">
-            <a class="text-grey-darkest" href="https://github.com/MZanggl"><i class="fab fa-github px-2"></i></a>
-            <a class="text-grey-darkest" href="https://dev.to/mzanggl"><i class="fab fa-dev px-2"></i></a>
-            <a class="text-grey-darkest" href="mailto:michaelzanggl@gmail.com"><i class="fa fa-envelope px-2"></i></a>
+            <a class="text-grey-darkest" href="https://github.com/MZanggl" aria-label="github"><i class="fab fa-github px-2"></i></a>
+            <a class="text-grey-darkest" href="https://dev.to/mzanggl" aria-label="dev.to"><i class="fab fa-dev px-2"></i></a>
+            <a class="text-grey-darkest" href="mailto:michaelzanggl@gmail.com" aria-label="mail"><i class="fa fa-envelope px-2"></i></a>
         </div>
     </header>
     <div class="p-3 text-center bg-white border-b z-10 fixed pin-t pin-l w-full">
-        <img src="_assets/images/logo.jpg" class="align-middle rounded-full border-indigo-dark shadow h-12">
+        <img src="_assets/images/logo.jpg" alt="" class="align-middle rounded-full border-indigo-dark shadow h-12">
         <span class="ml-1 align-middle text-sm">Michael Zanggl</span>
     </div>
     <main id="app">
@@ -39,11 +40,11 @@
                         <div class="text-center  sm:text-left sm:flex-grow">
                             <div class="mb-4">
                                 <p class="text-xl leading-tight">ipluseins</p>
-                                <p class="text-sm leading-tight text-grey-dark">Free language learning service</p>
+                                <p class="text-sm leading-tight text-grey-darker">Free language learning service</p>
                             </div>
                             <div>
-                                <a href="https://ipluseins.com">
-                                    <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white">Visit</button>
+                                <a href="https://ipluseins.com" aria-label="ipluseins">
+                                    <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple-dark text-purple-dark hover:bg-purple-dark hover:text-white">Visit</button>
                                 </a>
                             </div>
                         </div>
@@ -56,11 +57,11 @@
                         <div class="text-center sm:text-left sm:flex-grow">
                             <div class="mb-4">
                                 <p class="text-xl leading-tight">oresm</p>
-                                <p class="text-sm leading-tight text-grey-dark">Client ORM for REST APIs</p>
+                                <p class="text-sm leading-tight text-grey-darker">Client ORM for REST APIs</p>
                             </div>
                             <div>
-                                <a href="https://github.com/MZanggl/oresm">
-                                    <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white">Visit</button>
+                                <a href="https://github.com/MZanggl/oresm" aria-label="oresm">
+                                    <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple-dark text-purple-dark hover:bg-purple-dark hover:text-white">Visit</button>
                                 </a>
                             </div>
                         </div>
@@ -73,11 +74,11 @@
                         <div class="text-center sm:text-left sm:flex-grow">
                             <div class="mb-4">
                                 <p class="text-xl leading-tight">Adonis / Vue blueprint</p>
-                                <p class="text-sm leading-tight text-grey-dark">Fullstack boilerplate for AdonisJs and VueJs</p>
+                                <p class="text-sm leading-tight text-grey-darker">Fullstack boilerplate for AdonisJs and VueJs</p>
                             </div>
                             <div>
-                                <a href="https://github.com/MZanggl/adonis-vue-demo">
-                                    <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white">Visit</button>
+                                <a href="https://github.com/MZanggl/adonis-vue-demo" aria-label="adonis vue demo">
+                                    <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple-dark text-purple-dark hover:bg-purple-dark hover:text-white">Visit</button>
                                 </a>
                             </div>
                         </div>
@@ -104,9 +105,9 @@
                 <a :href="article.url" class="no-underline text-grey-darkest">
                     <p class="text-xl leading-tight font-bold" v-text="article.title"></p>
                 </a>
-                <p class="text-sm leading-tight text-grey-dark" v-text="article.teaser"></p>
-                <a :href="article.url" class="block mt-4">
-                    <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white">Read</button>
+                <p class="text-sm leading-tight text-grey-darker" v-text="article.teaser"></p>
+                <a :href="article.url" class="block mt-4" :aria-label="article.title">
+                    <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple-dark text-purple-dark hover:bg-purple-dark hover:text-white">Read</button>
                 </a>
             </div>
         </div>
@@ -114,9 +115,9 @@
     </main>
     <footer class="text-center bg-indigo-lightest py-5 relative">
         <div class="text-xl">
-            <a class="text-indigo-darkest" href="https://github.com/MZanggl"><i class="fab fa-github px-2"></i></a>
-            <a class="text-indigo-darkest" href="https://dev.to/mzanggl"><i class="fab fa-dev px-2"></i></a>
-            <a class="text-indigo-darkest" href="mailto:michaelzanggl@gmail.com"><i class="fa fa-envelope px-2"></i></a>
+            <a class="text-indigo-darkest" href="https://github.com/MZanggl" aria-label="github"><i class="fab fa-github px-2"></i></a>
+            <a class="text-indigo-darkest" href="https://dev.to/mzanggl" aria-label="dev.to"><i class="fab fa-dev px-2"></i></a>
+            <a class="text-indigo-darkest" href="mailto:michaelzanggl@gmail.com" aria-label="mail"><i class="fa fa-envelope px-2"></i></a>
         </div>
         <div class="text-sm pt-3">
             Michael Zanggl
