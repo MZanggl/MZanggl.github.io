@@ -34,7 +34,7 @@
             <h3 class="text-center text-grey-darkest text-xl">Recent projects</h3>
             <div class="my-5 px-6 py-4">
 
-                <div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
+                <div class="bg-white mx-auto max-w-sm shadow overflow-hidden">
                     <div class="sm:flex sm:items-center px-6 py-4">
                         <img class="block w-16 mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0" src="https://ipluseins.com/images/logo.png" alt="">
                         <div class="text-center  sm:text-left sm:flex-grow">
@@ -51,7 +51,7 @@
                     </div>
                 </div>
 
-                <div class="mt-8 bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
+                <div class="mt-8 bg-white mx-auto max-w-sm shadow overflow-hidden">
                     <div class="sm:flex sm:items-center px-6 py-4">
                         <img class="block w-16 mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0" src="https://github.com/MZanggl/oresm/blob/master/logo.png?raw=true" alt="">
                         <div class="text-center sm:text-left sm:flex-grow">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
 
-                <div class="mt-8 bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
+                <div class="mt-8 bg-white mx-auto max-w-sm shadow overflow-hidden">
                     <div class="sm:flex sm:items-center px-6 py-4">
                         <img class="block w-16 mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0" src="_assets/images/adonis-vue-logo.png" alt="">
                         <div class="text-center sm:text-left sm:flex-grow">
@@ -89,9 +89,9 @@
         </div>
         
         <div class="py-10 px-3 bg-indigo-darkest text-left text-white" v-cloak>
-            <div class="mx-auto max-w-sm font-mono">
-                {
-                <div v-for="(value, key, index) in description" class="ml-5">
+            <div class="mx-auto max-w-md font-mono text-sm">
+                <div class="mb-1">{</div>
+                <div v-for="(value, key, index) in description" class="ml-3 mb-1">
                     <span class="text-blue-light">"{{ key }}"</span>:
                     <span class="text-yellow-light">"{{ value }}"</span><span v-if="index + 1 < descriptionLength">,</span>
                 </div>
@@ -100,7 +100,7 @@
         </div>
 
         <div class="my-16 px-4 container mx-auto" v-cloak>
-            <h3 class="text-center text-grey-darkest text-xl">Articles</h3>
+            <h3 class="text-center text-grey-darkest text-xl">Blog posts</h3>
             <div v-for="article in articles" :key="article.url" class="bg-white mx-auto max-w-sm my-5 px-6 py-4">
                 <a :href="article.url" class="no-underline text-grey-darkest">
                     <p class="text-xl leading-tight font-bold" v-text="article.title"></p>
@@ -119,14 +119,11 @@
             <a class="text-indigo-darkest" href="https://dev.to/mzanggl" aria-label="dev.to"><i class="fab fa-dev px-2"></i></a>
             <a class="text-indigo-darkest" href="mailto:michaelzanggl@gmail.com" aria-label="mail"><i class="fa fa-envelope px-2"></i></a>
         </div>
-        <div class="text-sm pt-3">
-            Michael Zanggl
-        </div>
     </footer>
 
     <script src="_assets/scripts/vue.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
-    <script src="_assets/scripts/main.js"></script>
+    <script src="_assets/scripts/main.js?d=20190328"></script>
 </body>
 </html>
