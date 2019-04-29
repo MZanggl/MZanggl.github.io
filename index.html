@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/jpeg" href="_assets/images/logo.jpg">
+    <link rel="preconnect" href="https://firestore.googleapis.com" crossorigin>
     <style>
         [v-cloak] {display: none}
     </style>
@@ -102,6 +103,15 @@
                     </div>
                 </div>
 
+                <div class="text-center mt-8">
+                    <a href="https://github.com/MZanggl/">
+                        <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple-dark text-purple-dark hover:bg-purple-dark hover:text-white">
+                            <i class="fab fa-github pr-1"></i>
+                            More on GitHub
+                        </button>
+                    </a>
+                </div>
+
             </div>
         </div>
         
@@ -125,6 +135,14 @@
                 <p class="text-sm leading-tight text-grey-darker" v-text="article.teaser"></p>
                 <a :href="article.url" class="block mt-4" :aria-label="article.title">
                     <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple-dark text-purple-dark hover:bg-purple-dark hover:text-white">Read</button>
+                </a>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="https://dev.to/mzanggl">
+                    <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple-dark text-purple-dark hover:bg-purple-dark hover:text-white">
+                        More on DEV
+                    </button>
                 </a>
             </div>
         </div>
