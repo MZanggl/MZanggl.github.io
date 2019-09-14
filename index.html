@@ -131,7 +131,14 @@
             <h3 class="text-center text-grey-darkest text-xl">Blog posts</h3>
             <div v-for="article in articles" :key="article.url" class="bg-white mx-auto max-w-sm my-5 px-6 py-4">
                 <a :href="article.url" class="no-underline text-grey-darkest">
-                    <p class="text-xl leading-tight font-bold" v-text="article.title"></p>
+                    <p class="text-xl leading-tight font-bold mb-1">
+                        <span class="align-middle mr-1" v-text="article.title"></span>
+                        <template v-if="article.labels">
+                            <template v-for="label in article.labels.split(',')">
+                                <span v-text="label" class="font-normal rounded-full bg-purple-dark text-xs align-middle px-2 py-1 text-grey-lightest"></span>
+                            </template>
+                        </template>
+                    </p>
                 </a>
                 <p class="text-sm leading-tight text-grey-darker" v-text="article.teaser"></p>
                 <a :href="article.url" class="block mt-4" :aria-label="article.title">
