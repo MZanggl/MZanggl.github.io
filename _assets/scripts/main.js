@@ -13,9 +13,9 @@ const app = new Vue({
         description: {
             name: 'Michael Zanggl',
             location: 'Tokyo, Japan',
-            skills: 'Strong understanding of Vanilla JavaScript, Team player',
-            proficientIn: 'ES6+, Vue, TypeScript, Laravel, Adonis, HTML, Git, CSS, SQL',
-            alsoUsed: 'React, GraphQL, jQuery, Express, Bootstrap, MongoDB'
+            skills: 'Web development, Strong understanding of Vanilla JavaScript',
+            proficientIn: 'ES6+, Vue, React, TypeScript, Laravel, Adonis, Git, SQL',
+            alsoUsed: 'HapiJs, GraphQL, jQuery, Express, Bootstrap, MongoDB'
         },
         articles,
     },
